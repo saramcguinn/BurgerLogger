@@ -1,3 +1,36 @@
+body {
+    background-color: tan;
+    text-align: center;
+}
+
 h1 {
-    color: red;
+    color: darkslategray;
+}
+
+h2 {
+    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+ol {
+    text-align: left;
+    padding-top: 10px;
+    margin-top: 8px;
+}
+
+.container {
+    width: 80%;
+    border: 2px solid black;
+    margin: auto;
+    padding: 10px;
+}
+
+#toBeDevoured-div {
+    display: inline-flex;
+}
+
+#devoured-div {
+    display: inline-flex;
 }

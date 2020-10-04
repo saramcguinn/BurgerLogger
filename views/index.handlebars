@@ -1,36 +1,38 @@
+<img src="/assets/img/burger-clipart.png" width=200>
 <h1>EAT-DA-BURGER</h1>
 
-{{!-- <h2>Burgers To Eat</h2> --}}
-
-<div>
-    <ul>
-        {{#each burgers}}
+<div class="container">
+    <div id="toBeDevoured-div">
+        <h2>To Be Devoured:</h2>
+        <br>
+        <ol>
+            {{#each burgers}}
             {{#unless devoured}}
             <li>
                 {{burger_name}}
                 <button class="devour-burger" data-id="{{id}}">
-                    DEVOUR IT!        
+                    DEVOUR IT!
                 </button>
-                {{!-- <button class="delete-burger" data-id="{{this.id}}">DELETE</button> --}}
             </li>
             {{/unless}}
-        {{/each}}
-    </ul>
-</div>
+            {{/each}}
+        </ol>
+    </div>
 
-{{!-- <h2>Burgers Already Eaten</h2> --}}
-
-<div>
-    <ul>
-        {{#each burgers}}
+    <div id="devoured-div">
+        <h2>Devoured:</h2>
+        <br>
+        <ol>
+            {{#each burgers}}
             {{#if devoured}}
             <li>
                 {{burger_name}}
-                <button class="delete-burger" data-id="{{this.id}}">DELETE</button>
+                <button class="delete-burger" data-id="{{this.id}}">X</button>
             </li>
             {{/if}}
-        {{/each}}
-    </ul>
+            {{/each}}
+        </ol>
+    </div>
 </div>
 
 <div>
@@ -40,14 +42,7 @@
         <div class="form-group">
             <label for="ca">Burger Name:</label>
             <input type="text" id="ca" name="name">
+            <button type="submit">Add Burger</button>
         </div>
-
-        {{!-- <div class="form-group">
-            <label for="eaten">Already Eaten?</label><br>
-            <input type="radio" name="eaten" value="1" checked> Eaten <br>
-            <input type="radio" name="eaten" value="0"> To Eat
-        </div> --}}
-
-        <button type="submit">Add Burger</button>
     </form>
 </div>
